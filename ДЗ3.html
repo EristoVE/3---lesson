@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Case 3
+        </title>
+    </head>
+        <body>
+            <script>
+
+                "use strict";
+
+                // Написать программу, которая запрашивает число, месяц и год, затем сохраняет
+                // введенные значения в виде объекта, а затем, используя данные из объекта,
+                // выводит число, соответствующее дню недели в JavaScript, в консоль.
+              
+                let day = prompt ("Введите число месяца","01");  
+                let month = prompt ("Введите месяц","01");     
+                let year = prompt ("Введите год","2023");  
+
+                let a = new Date(); 
+            
+                a = new Date(year, month -1, day);
+                                                              
+                let options =
+                {
+                    year: 'numeric',
+                    month: 'numeric',
+                    day: 'numeric',
+                    //hour: 'numeric',
+                    //minute: 'numeric',
+                    //second: 'numeric',
+                    weekday: 'long',
+                    //timezone: 'UTC',
+                    //era: 'long'
+                };
+
+                console.log(a.toLocaleString('ru-Ru', options), "День недели", a.getDay());
+
+            </script>
+        </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Case 4
+        </title>
+    </head>
+        <body>
+            <script>
+
+                "use strict";
+
+                // Написать программу, которая запрашивает фамилии и месячные зарплаты двух
+                // сотрудников организации, а затем выводит выплаченную каждому из них за год
+                // зарплату, их общую зарплату за год, а также их среднюю месячную зарплату,
+                // округленную до большего целого числа. Данные о каждом сотруднике хранить в
+                // отдельном объекте.
+                
+                let c;
+                let b;
+                const a = 12;
+
+                let user = {};
+                user.lastName = prompt ("Введите фамилию сотрудника", "Иванов"); 
+                user.monthsalary = prompt ("Введите месячную ЗП","30280.23");
+                user.c = (user.monthsalary*a);
+                                 
+                console.log(user.lastName, user.monthsalary, "Годовая ЗП", user.c); 
+
+                let user1 = {};
+                user1.lastName = prompt ("Введите фамилию сотрудника", "Сидоров"); 
+                user1.monthsalary = prompt ("Введите месячную ЗП", "45625.56");
+                user1.c = (user1.monthsalary*a);
+                                 
+                console.log(user1.lastName, user1.monthsalary, "Годовая ЗП", user1.c);
+                
+                b = (user.c + user1.c) / 12;
+                c = (user.c + user1.c);
+
+                console.log("Средняя ЗП за год Иванова и Сидорова", b, "Общая сумма зп работников", c);
+        
+            </script>
+        </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Case 1
+        </title>
+    </head>
+        <body>
+            <script>
+               
+                "use strict";
+
+                // Написать программу, которая запрашивает два вещественных числа a и b, а затем
+                // генерирует случайное число из полуинтервала [a; b). Вводимые пользователем
+                // числа могут быть, в том числе, и отрицательными. Предполагаем, что числа
+                // вводятся пользователем в порядке возрастания. Результаты вывести в консоль.
+
+                var a = prompt("Введите любую минимальую цифру или число", "-5");
+                var b = prompt("Введите любую максимальную цифру или число", "5");
+
+                a = Number(a); 
+                b = Number(b);
+
+                function random(min,max) {
+
+                    var a = min;
+                    var b = max;
+
+                    return Math.floor(Math.random() * (max - min + 1)) + min;
+                };
+                    var rand =random(a, b);
+                                       
+                    console.log(rand);       
+                                             
+            </script>
+        </body>
+</html>
